@@ -44,6 +44,7 @@ Website ini dirancang khusus sebagai **showcase portofolio kerja** untuk membukt
 * 📊 **Animated Stats Counter**: Angka metrik alumni dan kelulusan bergerak naik otomatis (*counter animation*) saat di-scroll ke area pandang menggunakan modern **IntersectionObserver API**.
 * 📚 **Interactive Curriculum Roadmap with Filter Tabs**: Filter silabus modul berdasarkan kategori (*Web Foundations, Bootstrap, JavaScript, React, Career*) yang berjalan mulus dengan animasi transisi.
 * 💼 **Real-World Project Showcase**: Pameran 3 proyek komersial yang akan dibangun siswa (E-Commerce Storefront, SaaS Dashboard, Movie App API).
+* 🌟 **Interactive Testimonials Carousel with Autoplay & Dots**: Slider ulasan alumni (5 profil alumni) dengan *auto-sliding* mulus setiap 4 detik, *pause on hover*, navigasi dot interaktif, tombol panah prev/next, serta dukungan *touch swipe* di layar mobile.
 * 💰 **Interactive Pricing Switcher**: Toggle switch antara harga "Sekali Bayar (Diskon)" dan "Cicilan 3x" dengan animasi transisi angka real-time.
 * ❓ **Interactive FAQ Accordion**: Tanya jawab umum dengan dukungan aksesibilitas keyboard dan transisi mulus bawaan Bootstrap.
 * 📝 **Lead Consultation Form with Client-side Validation**:

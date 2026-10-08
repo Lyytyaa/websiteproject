@@ -740,8 +740,11 @@
     <!-- =======================================================================
          9. Testimonials & Alumni Success Stories
          ======================================================================= -->
+    <!-- =======================================================================
+         9. Testimonials & Alumni Success Stories (Interactive Carousel)
+         ======================================================================= -->
     <section id="testimoni" class="section-padding" aria-labelledby="testimonial-title">
-      <div class="container">
+      <div class="container position-relative">
         <div class="text-center mb-5">
           <span class="section-tag"><i class="bi bi-chat-heart"></i> Cerita Sukses</span>
           <h2 id="testimonial-title" class="section-title">Apa Kata Mereka yang Sudah Lulus?</h2>
@@ -750,63 +753,207 @@
           </p>
         </div>
 
-        <div class="row g-4">
-          <!-- Testimonial 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card">
-              <div>
-                <i class="bi bi-quote quote-icon"></i>
-                <p class="text-muted">
-                  "Sebelumnya saya lulusan manajemen dan buta koding sama sekali. Di Abdul Malik belajarnya step by step banget, mulai dari HTML CSS sampai JavaScript dijelaskan dari logikanya bukan cuma copy-paste. Sekarang sudah bekerja sebagai Junior FE di Software House Jakarta!"
-                </p>
-              </div>
-              <div class="alumni-meta">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces" alt="Rizka Putri" class="alumni-avatar">
+        <!-- Carousel Outer Wrapper -->
+        <div class="testimonial-carousel-container" id="testimonialCarousel">
+          <div class="testimonial-track" id="testimonialTrack">
+            <!-- Slide 1: Rizka Putri -->
+            <div class="testimonial-slide-item" data-index="0">
+              <div class="testimonial-card">
                 <div>
-                  <h6 class="mb-0 fw-bold">Rizka Putri</h6>
-                  <small class="text-muted">Eks Sales &rarr; Junior Front-End Dev</small>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Sebelumnya saya lulusan manajemen dan buta koding sama sekali. Di Abdul Malik Academy belajarnya step by step banget, mulai dari HTML CSS sampai JavaScript dijelaskan dari logikanya bukan cuma copy-paste. Sekarang sudah bekerja sebagai Junior FE di Software House Jakarta!"
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces" alt="Rizka Putri" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Rizka Putri</h6>
+                    <small class="text-muted">Eks Sales &rarr; Junior Front-End Dev</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Bagas Wicaksono -->
+            <div class="testimonial-slide-item" data-index="1">
+              <div class="testimonial-card">
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Paling berharga itu sesi 1-on-1 Code Review-nya! Setiap tugas diperiksa baris demi baris, dikasih tahu kenapa cara A lebih lambat dibanding cara B. Portofolio saya yang dibimbing di sini langsung bikin HRD tertarik pas interview pertama."
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces" alt="Bagas Wicaksono" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Bagas Wicaksono</h6>
+                    <small class="text-muted">Frontend Web Developer @ FinTech</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Alvin Sanjaya -->
+            <div class="testimonial-slide-item" data-index="2">
+              <div class="testimonial-card">
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Dulu sempat belajar otodidak hampir 8 bulan tapi mentok di JavaScript DOM. Di Abdul Malik Academy cuma butuh 10 minggu buat benar-benar paham flow data dan cara integrasi API. Sangat rekomen untuk yang mau jalur cepat dan terarah!"
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces" alt="Alvin Sanjaya" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Alvin Sanjaya</h6>
+                    <small class="text-muted">Web Developer @ E-Commerce Startup</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Nadia Maharani (Alumni Baru 1) -->
+            <div class="testimonial-slide-item" data-index="3">
+              <div class="testimonial-card">
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Awalnya ragu karena background saya pendidikan bahasa dan merasa gaptek. Mentor di Abdul Malik Academy sabar banget memandu dari nol. Kurikulum Bootstrap 5 dan React-nya sangat aplikatif, sekarang saya sudah 6 bulan berkarier jadi FE Engineer!"
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces" alt="Nadia Maharani" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Nadia Maharani</h6>
+                    <small class="text-muted">Eks Guru Bahasa &rarr; Frontend Engineer @ EdTech</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Fajar Nugraha (Alumni Baru 2) -->
+            <div class="testimonial-slide-item" data-index="4">
+              <div class="testimonial-card">
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Kurikulumnya beneran up-to-date dengan standar industri terkini. Pemahaman logika JavaScript Vanilla sebelum loncat ke React bener-bener jadi game changer waktu tes live coding. Portofolio akhir di sini terbukti diakui oleh recruiter!"
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces" alt="Fajar Nugraha" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Fajar Nugraha</h6>
+                    <small class="text-muted">Fresh Grad Mesin &rarr; Junior React Developer</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clones for seamless 3-card sliding view on desktop -->
+            <div class="testimonial-slide-item d-none d-md-block" aria-hidden="true">
+              <div class="testimonial-card">
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Sebelumnya saya lulusan manajemen dan buta koding sama sekali. Di Abdul Malik Academy belajarnya step by step banget, mulai dari HTML CSS sampai JavaScript dijelaskan dari logikanya bukan cuma copy-paste. Sekarang sudah bekerja sebagai Junior FE di Software House Jakarta!"
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces" alt="Rizka Putri" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Rizka Putri</h6>
+                    <small class="text-muted">Eks Sales &rarr; Junior Front-End Dev</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide-item d-none d-lg-block" aria-hidden="true">
+              <div class="testimonial-card">
+                <div>
+                  <div class="d-flex align-items-center gap-1 text-warning mb-2">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <i class="bi bi-quote quote-icon"></i>
+                  <p class="text-muted">
+                    "Paling berharga itu sesi 1-on-1 Code Review-nya! Setiap tugas diperiksa baris demi baris, dikasih tahu kenapa cara A lebih lambat dibanding cara B. Portofolio saya yang dibimbing di sini langsung bikin HRD tertarik pas interview pertama."
+                  </p>
+                </div>
+                <div class="alumni-meta">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces" alt="Bagas Wicaksono" class="alumni-avatar">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Bagas Wicaksono</h6>
+                    <small class="text-muted">Frontend Web Developer @ FinTech</small>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card">
-              <div>
-                <i class="bi bi-quote quote-icon"></i>
-                <p class="text-muted">
-                  "Paling berharga itu sesi 1-on-1 Code Review-nya! Setiap tugas diperiksa baris demi baris, dikasih tahu kenapa cara A lebih lambat dibanding cara B. Portofolio saya yang dibimbing di sini langsung bikin HRD tertarik pas interview pertama."
-                </p>
-              </div>
-              <div class="alumni-meta">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces" alt="Bagas Wicaksono" class="alumni-avatar">
-                <div>
-                  <h6 class="mb-0 fw-bold">Bagas Wicaksono</h6>
-                  <small class="text-muted">Frontend Web Developer @ FinTech</small>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Carousel Arrow Navigation -->
+          <button type="button" class="carousel-nav-btn prev-btn d-none d-md-flex" id="testiPrevBtn" aria-label="Slide Sebelumnya">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button type="button" class="carousel-nav-btn next-btn d-none d-md-flex" id="testiNextBtn" aria-label="Slide Selanjutnya">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
 
-          <!-- Testimonial 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card">
-              <div>
-                <i class="bi bi-quote quote-icon"></i>
-                <p class="text-muted">
-                  "Dulu sempat belajar otodidak hampir 8 bulan tapi mentok di JavaScript DOM. Di Abdul Malik cuma butuh 10 minggu buat benar-benar paham flow data dan cara integrasi API. Sangat rekomen untuk yang mau jalur cepat dan terarah!"
-                </p>
-              </div>
-              <div class="alumni-meta">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces" alt="Alvin Sanjaya" class="alumni-avatar">
-                <div>
-                  <h6 class="mb-0 fw-bold">Alvin Sanjaya</h6>
-                  <small class="text-muted">Web Developer @ E-Commerce Startup</small>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Dot Indicators (5 Dots) -->
+        <div class="testimonial-dots-nav" id="testiDotsNav" role="tablist" aria-label="Testimonial Navigation Dots">
+          <button type="button" class="testimonial-dot-btn active" data-slide="0" aria-label="Lihat ulasan 1 (Rizka Putri)"></button>
+          <button type="button" class="testimonial-dot-btn" data-slide="1" aria-label="Lihat ulasan 2 (Bagas Wicaksono)"></button>
+          <button type="button" class="testimonial-dot-btn" data-slide="2" aria-label="Lihat ulasan 3 (Alvin Sanjaya)"></button>
+          <button type="button" class="testimonial-dot-btn" data-slide="3" aria-label="Lihat ulasan 4 (Nadia Maharani)"></button>
+          <button type="button" class="testimonial-dot-btn" data-slide="4" aria-label="Lihat ulasan 5 (Fajar Nugraha)"></button>
         </div>
       </div>
     </section>

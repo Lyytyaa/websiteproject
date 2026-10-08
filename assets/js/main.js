@@ -227,7 +227,125 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 7. Smooth Scroll Offset Helper for Anchor Links
+  // 7. Interactive Testimonial Carousel (Autoplay, Dots & Touch Swipe)
+  // =========================================================================
+  const track = document.getElementById('testimonialTrack');
+  const carouselContainer = document.getElementById('testimonialCarousel');
+  const dots = document.querySelectorAll('.testimonial-dot-btn');
+  const prevBtn = document.getElementById('testiPrevBtn');
+  const nextBtn = document.getElementById('testiNextBtn');
+
+  if (track && dots.length > 0) {
+    let currentIndex = 0;
+    const totalDots = dots.length;
+    let autoplayTimer = null;
+    const autoplayDelay = 4000; // 4 seconds autoplay
+
+    const updateSlider = (index) => {
+      currentIndex = (index + totalDots) % totalDots;
+
+      // Calculate translation offset based on slide width and gap
+      const slide = track.querySelector('.testimonial-slide-item');
+      if (slide) {
+        const slideWidth = slide.offsetWidth;
+        const gap = 24; // 1.5rem (24px)
+        const offset = currentIndex * (slideWidth + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+
+      // Update active dot styling
+      dots.forEach((dot, i) => {
+        if (i === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+
+    // Dot click listeners
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const targetIndex = parseInt(dot.getAttribute('data-slide'), 10);
+        updateSlider(targetIndex);
+        resetAutoplay();
+      });
+    });
+
+    // Arrow navigation buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        updateSlider(currentIndex - 1);
+        resetAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        updateSlider(currentIndex + 1);
+        resetAutoplay();
+      });
+    }
+
+    // Autoplay controls
+    const startAutoplay = () => {
+      if (!autoplayTimer) {
+        autoplayTimer = setInterval(() => {
+          updateSlider(currentIndex + 1);
+        }, autoplayDelay);
+      }
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    };
+
+    const resetAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    startAutoplay();
+
+    // Pause on mouse hover for reading comfort
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', stopAutoplay);
+      carouselContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Mobile touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeDistance = touchEndX - touchStartX;
+      if (Math.abs(swipeDistance) > 40) {
+        if (swipeDistance < 0) {
+          updateSlider(currentIndex + 1);
+        } else {
+          updateSlider(currentIndex - 1);
+        }
+      }
+      startAutoplay();
+    }, { passive: true });
+
+    // Re-align slides on window resize
+    window.addEventListener('resize', () => {
+      updateSlider(currentIndex);
+    }, { passive: true });
+  }
+
+  // =========================================================================
+  // 8. Smooth Scroll Offset Helper for Anchor Links
   // =========================================================================
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
